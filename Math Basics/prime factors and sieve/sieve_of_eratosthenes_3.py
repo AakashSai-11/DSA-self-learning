@@ -49,6 +49,30 @@ for i in range(n+1):
     if prime[i] == 1:
         print(i)
         
+        
+def seive(n):
+  primes = [i for i in range(n + 1)]
+  for i in range(2, int(n ** (0.5)) + 1):
+    if primes[i] == i:
+      for j in range(i * i, n + 1, i):
+        primes[j] = i
+  return primes
+
+print(seive(20))
+
+def prime_factorization(n):
+  pf = {}
+  i = 2
+  while i * i <= n:
+    while n % i == 0:
+      n = n // i
+      pf[i] = pf.get(i, 0) + 1
+    i += 1
+  return pf
+
+print(prime_factorization(36))
+    
+        
 '''
 There are optimisations, where we dont need to start from every multiple like 2x2,2x3,2x4, its ok for 2 but when we think of 3, we
 dont need to consider 3x2 and for 4 we dont need to consider 4x2, 4x3 and we can directly start from 4x4 so the second loop starts
