@@ -27,7 +27,7 @@ APPROACH 2 -> This is based on the eucleadean algorithm, where the process goes 
                                  2 in this case so the gcd of 4 and 6 is 2
                                  
             def gcd(a,b):
-                if a==0:
+                if b==0:
                     return a
                 if a<b:
                     a,b = b,a
