@@ -32,7 +32,7 @@ APPROACH 2 -> This is based on the eucleadean algorithm, where the process goes 
                 if a<b:
                     a,b = b,a
                 
-                gcd(b, a%b)
+                return gcd(b, a%b)
                 
             -> This is O(log(n)) TC and much better than the previous one
     
